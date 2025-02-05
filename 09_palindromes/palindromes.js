@@ -1,10 +1,16 @@
 const palindromes = function (word) {
-const reversedWord = `${word}`.split("").reverse().join("");
-word = word.split("").join("");
-if (`${word}`.toUpperCase == reversedWord.toUpperCase){
-    /* return console.log(reversedWord + word) */
+// const reversedWord = word.split("").reverse().join("");
+ const normalizedWord = word.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+ const reversedWord = normalizedWord.split("").reverse().join("");
+console.log(reversedWord);
+if (normalizedWord === reversedWord){
     return true;
-} return false;
+
+    }
+
+/* if (word.toUpperCase() === reversedWord.toUpperCase()){
+    console.log(reversedWord + " WWW " + `${word}`) */
+ return false;
 };
 
 // Do not edit below this line
